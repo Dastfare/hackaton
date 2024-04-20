@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация предприятия</title>
+<style>
+  body {
+    font-family: arial, sans-serif;
+    background-color: rgb(180, 173, 145);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .registration-container {
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .registration-header {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  form {
+    width: 100%;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="registration-container">
+  <h1 class="registration-header">Регистрация</h1>
+  
+  <form action="/submit_registration" method="post">
+    <label for="name">Название:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    
+    <label for="city">Город:</label><br>
+    <input type="text" id="city" name="city" required><br>
+    
+    <label for="email">Почта:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    
+    <label for="password">Пароль:</label><br>
+    <input type="password" id="password" name="password" required minlength="8"><br>
+    
+    <input type="submit" value="Зарегистрироваться">
+  </form>
+</div>
+
+</body>
+</html>
