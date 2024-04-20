@@ -12,7 +12,7 @@
             height: 100vh;
             margin: 0;
             background-color: rgb(180, 173, 145);
-	    font-family: arial, sans-serif;
+            font-family: arial, sans-serif;
         }
 
         form {
@@ -55,7 +55,7 @@
 </head>
 <body>
     <form id="registrationForm" action="/submit_registration" method="POST">
-	<h1>Регистрация</h1>
+        <h1>Регистрация</h1>
         <label for="surname">Фамилия:</label><br>
         <input type="text" id="surname" name="surname" required><br>
         
@@ -68,8 +68,14 @@
         <label for="university">ВУЗ:</label><br>
         <input type="text" id="university" name="university" required><br>
         
+        <label for="faculty">Факультет:</label><br> <!-- Добавлено поле "Факультет" -->
+        <input type="text" id="faculty" name="faculty" required><br> <!-- Добавлено поле "Факультет" -->
+        
         <label for="course">Курс:</label><br>
         <input type="number" id="course" name="course" min="1" required><br>
+        
+        <label for="group">Группа:</label><br> <!-- Добавлено поле "Группа" -->
+        <input type="text" id="group" name="group" required><br> <!-- Добавлено поле "Группа" -->
         
         <input type="submit" value="Зарегистрироваться">
     </form>
